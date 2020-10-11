@@ -6,7 +6,7 @@ We provide source files for parsing the ICL-NUIM format data uploaded on the web
 
 Use the following camera calibration matrix, K
 
-$\begin{matrix} a & b \\ c & d \end{matrix}$
+$\begin{matrix} a & b \\\\ c & d \end{matrix}$
 
 
 481.20,	 0,	  319.50
