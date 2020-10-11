@@ -43,17 +43,27 @@ Batch Renaming Files: For batch renaming files, you may find the tool, gprename 
 > gprename: http://gprename.sourceforge.net/
 
 
+Appending String At The End of Lines In A File: In case you want to add the same string at the end of all the lines in a file, you may find the following command useful. This needs vim in escape (ESC) mode.
 
+> %norm A \_string_you_want_to_append\_
 
+Batch Conversion File Format: If you are looking to batch convert images from one format to other, the following command let us you convert (as an example) all ppm files to png format in batch.
 
+> mogrify -format png \*.ppm
 
+Averaging Images: At times, you may feel the need to average images. ImageMagick's convert command lets you easily do that on your shell as shown in the following.
 
+> convert -average scene\_??\_0000.png scene_avg_0000.png
 
+Creating Symbolic Links With Shell For Loop: To create symbolic links of files for different frame-rates, you may want to use the shell for loop for that on your command prompt.
 
+> for i in {20..200..20}; do `ln -s /vol/robotvision/ahanda/DatasetOnline/$i\fps/$i\fps_perfect_images_format.tgz $i\fps_perfect_images_format.tgz`; done
 
+Replacing a text in multiple files of directory: To replace a given string in multiple files in a directory on your command prompt.
 
+> sed -i 's/text to replace/new text/g' \*.sh
 
+Deleting line containing a particular text/string in vim :
 
-
-
+> :g/text_string/d
 
