@@ -6,11 +6,6 @@ We provide source files for parsing the ICL-NUIM format data uploaded on the web
 
 Use the following camera calibration matrix, K
 
-$\begin{matrix} a & b \\\\ c & d \end{matrix}$
-
-
-481.20,	 0,	  319.50
-0,	-480.00,  239.50
-0,	 0,	  1
+$\begin{matrix} 481.20 & 0 & 319.50 \\\\ 0 & -480.00 & 239.50 \\\\ 0 & 0 & 1 \end{matrix}$
 
 Note that the focal length on the y-axis is negative. Your projections will not work properly if you do not use the negative focal length.
