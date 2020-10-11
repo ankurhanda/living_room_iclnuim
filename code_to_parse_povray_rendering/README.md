@@ -23,4 +23,21 @@ computeMotionField.m needs the 3D positions of points in the refernce frame and 
 computeMotionImages.m is a sample program that takes reference image, depth-map, pose file and gives a warped image obtained using optical flow.
 
 
+# Unix Commands for Manipulating With The Data
+
+We found the following commands quite useful when managing the video frames of the dataset. You may find some of them useful too, if you work on a UNIX based machine.
+
+Creating Video From Images: To quickly navigate through images, you may find it easy to first create a video out of images and then flick through the frames of the video. Alternatively you can use gthumb to have a thumbnail view of all the images. Gthumb also lets to edit images. In case you chose the former and want to convert the images to a video, you may find the following command useful.
+
+>> mencoder mf://@list.txt -mf w=640:h=480:fps=20:type=png -ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell -oac copy -o output.avi
+
+
+
+
+
+
+
+
+
+
 
