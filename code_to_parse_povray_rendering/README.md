@@ -29,7 +29,23 @@ We found the following commands quite useful when managing the video frames of t
 
 Creating Video From Images: To quickly navigate through images, you may find it easy to first create a video out of images and then flick through the frames of the video. Alternatively you can use gthumb to have a thumbnail view of all the images. Gthumb also lets to edit images. In case you chose the former and want to convert the images to a video, you may find the following command useful.
 
->> mencoder mf://@list.txt -mf w=640:h=480:fps=20:type=png -ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell -oac copy -o output.avi
+> mencoder mf://@list.txt -mf w=640:h=480:fps=20:type=png -ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell -oac copy -o output.avi
+
+The list.txt is a file containing the list of all images you want to make a video out of. More information about mencoder usage can be found online.
+
+
+Batch Removal Of Symbolic Links: We have links in directory for images that are common among different frame-rates. In case you want to remove links in batch, you may find the following command useful. You may need this when you create your own renderings and copy common files and later feel the need to remove the wrong ones copied.
+
+> find . -lname '\*' -exec rm {} \;
+
+Batch Renaming Files: For batch renaming files, you may find the tool, gprename quite useful. It is a simple GUI interface and lets you select files and rename them in batch very quickly.
+
+> gprename: http://gprename.sourceforge.net/
+
+
+
+
+
 
 
 
